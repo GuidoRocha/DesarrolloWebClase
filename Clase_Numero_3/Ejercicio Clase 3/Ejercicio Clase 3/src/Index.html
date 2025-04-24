@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Arquitecturas en dessarrollo web</title>
+   </head>
+   <body>
+      <!-- Contenido del cuerpo del documento HTML -->
+      <header>
+         <h1>HTML5 y arquitecturas de aplicaciones web</h1>
+      </header>
+      <nav>
+         <!-- Barra de navegación -->
+      </nav>
+      <section>
+         <img src="C:\Users\Botmaker\Desktop\Ejercicio Clase 3\Ejercicio Clase 3\image1.jpg" 
+         alt="imagen 1"
+         width="200"
+         hspace="10"       
+         vspace="10"      
+         border="1">
+         <h2>Introducción</h2>
+         <p>
+            HTML5 es la versión más reciente del lenguaje estándar para la construcción de páginas y aplicaciones web. 
+            Además de traer nuevas etiquetas y APIs (geolocalización, almacenamiento local, canvas, etc.), su adopción ha influido directamente en la forma en que diseñamos y organizamos nuestras aplicaciones.
+            Una elección adecuada de arquitectura garantiza escalabilidad, mantenibilidad y un ciclo de desarrollo más ágil. A continuación exploramos los principales estilos arquitectónicos y cómo se aplican en proyectos basados en HTML5.
+         </p>
+      </section>
+      <article>
+         <h2>Arquitectura monolítica</h2>
+         <p>
+            En un enfoque monolítico, toda la aplicación (presentación, lógica de negocio y acceso a datos) se publica como un único bloque de código.
+         </p>
+         <ul>
+            <li><strong>Características</strong>: una sola base de código; despliegue y escalado en conjunto.</li>
+            <li><strong>Ventajas</strong>: simplicidad inicial; menos coordinación de despliegues.</li>
+            <li><strong>Desafíos</strong>: dificulta el trabajo simultáneo de varios equipos; un cambio menor obliga a redeplegar todo el sistema.</li>
+         </ul>
+
+         <h2>Arquitectura cliente‑servidor</h2>
+         <p>
+            Es el modelo más clásico en la web: el navegador (cliente HTML5, CSS3 y JavaScript) solicita recursos a un servidor que procesa la lógica y responde con datos o páginas completas.
+         </p>
+         <ul>
+            <li><strong>Thin client</strong>: el cliente solo presenta UI; la mayor parte de la lógica corre en el servidor.</li>
+            <li><strong>Thick (o smart) client</strong>: el cliente asume parte de la lógica (por ejemplo, aplicaciones SPA con frameworks como Angular o React).</li>
+            <li><strong>Escalabilidad</strong>: podemos escalar servidores de backend y clientes de modo independiente según la carga.</li>
+         </ul>
+
+         <h2>Arquitectura peer‑to‑peer</h2>
+         <p>
+            Cada nodo puede actuar como cliente y servidor a la vez. En el contexto HTML5, se utilizan APIs como WebRTC para comunicación directa entre navegadores.
+         </p>
+         <p>
+            Ideal para aplicaciones de colaboración en tiempo real o intercambio de archivos sin pasar siempre por un servidor central.
+         </p>
+         <img src="C:\Users\Botmaker\Desktop\Ejercicio Clase 3\Ejercicio Clase 3\src\image2.jpg" 
+         alt="imagen 2"
+         width="400"
+         hspace="20"       
+         vspace="20"      
+         border="5">
+         <h2>Arquitectura en capas</h2>
+         <p>
+            Separa la aplicación en niveles con responsabilidades bien definidas:
+         </p>
+         <ol>
+            <li><strong>Presentación</strong>: markup y estilos HTML5/CSS, interacción del usuario (DOM, eventos).</li>
+            <li><strong>Lógica de negocio</strong>: servicios JavaScript en el cliente o APIs REST en el servidor.</li>
+            <li><strong>Acceso a datos</strong>: llamadas AJAX/fetch a backends o almacenamiento local (LocalStorage, IndexedDB).</li>
+         </ol>
+         <p>
+            Esta división facilita pruebas, mantenimiento y reemplazo de componentes sin afectar el resto.
+         </p>
+         <h2>Arquitectura microkernel</h2>
+         <p>
+            Conocida también como “plug‑in”: existe un núcleo mínimo que expone hooks para módulos adicionales.
+         </p>
+         <ul>
+            <li><strong>Core</strong>: agrupa las funcionalidades básicas HTML5 (renderizado, manejo de eventos).</li>
+            <li><strong>Plugins</strong>: extensiones que añaden características (por ejemplo, galerías de imágenes, reproductores de video usando la etiqueta <code>&lt;video&gt;</code>).</li>
+         </ul>
+         <p>
+            Permite crecer la aplicación instalando o quitando módulos según la necesidad.
+         </p>
+         <img src="./Assets/image3.jpg" 
+         alt="Imagen 3"
+         width="350"
+         hspace="40"       
+         vspace="40"      
+         border="5">
+         <h2>Arquitectura orientada a servicios (SOA)</h2>
+         <p>
+            Las funcionalidades se exponen como servicios independientes que pueden ser consumidos por otras aplicaciones:
+         </p>
+         <ul>
+            <li>Un cliente HTML5 puede invocar operaciones SOAP o REST en varios sistemas.</li>
+            <li>Favorece la reutilización de servicios (login, procesamiento de pagos, notificaciones) desde distintas interfaces.</li>
+         </ul>
+
+         <h2>Arquitectura de microservicios</h2>
+         <p>
+            Es la evolución de SOA hacia componentes aún más ligeros y autónomos:
+         </p>
+         <ul>
+            <li>Cada microservicio realiza una tarea muy específica (por ejemplo, gestión de usuarios, catálogo de productos).</li>
+            <li>Se comunican mediante APIs RESTful o mensajería.</li>
+            <li>En el front‑end HTML5, se puede usar un “compositor” (proxy o backend for frontend) que consolide datos de varios microservicios antes de enviarlos al navegador.</li>
+         </ul>
+
+         <h2>Arquitectura orientada a eventos</h2>
+         <p>
+            La aplicación reacciona a sucesos (events) que se publican en un bus o canal:
+         </p>
+         <ol>
+            <li>Un componente front‑end HTML5 genera un evento (por ejemplo, “usuario actualizó perfil”).</li>
+            <li>El Event Bus lo distribuye a quien esté suscrito (analítica, notificaciones en pantalla, logging).</li>
+            <li>Cada “Event Processor” actúa de forma desacoplada, mejorando la escalabilidad y resiliencia.</li>
+         </ol>
+         <img src="./Assets/extras/image4.jpg"
+         alt="imagen 4" 
+         width="200"
+         hspace="10"       
+         vspace="10"      
+         border="1">
+         <h2>Arquitectura REST</h2>
+         <p>
+            REST no es únicamente un estilo de APIs, sino un conjunto de restricciones arquitectónicas que promueven:
+         </p>
+         <ul>
+            <li><strong>Statelessness</strong>: cada petición contiene toda la información necesaria.</li>
+            <li><strong>Interfaces uniformes</strong>: recursos accesibles vía URIs bien definidas.</li>
+            <li><strong>Separación de cliente y servidor</strong>: el cliente HTML5 conoce el formato de las respuestas (JSON, XML) pero ignora la implementación del servidor.</li>
+         </ul>
+      </article>
+      <aside>
+         <!-- Contenido relacionado o complementario al contenido principal -->
+      </aside>
+      <footer>
+         <p>Guido Rocha Actividad Clase 3</p>
+      </footer>
+   </body>
+</html>
