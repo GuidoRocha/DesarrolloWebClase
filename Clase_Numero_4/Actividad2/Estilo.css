@@ -1,0 +1,83 @@
+/* 1. Reset y fuente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* 2. Cabecera */
+#header {
+    background: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+#header h1 {
+    font-size: 24px;
+}
+#header img {
+    max-height: 60px;
+    margin-left: auto;
+}
+
+/* 3. Contenedor principal a dos columnas */
+#wrapper {
+    display: flex;
+}
+
+/* 4. Menú */
+#menu {
+    width: 200px;
+    background: #e6e6e6;
+    padding: 20px;
+}
+#menu ul {
+    list-style: none;
+}
+#menu li + li {
+    margin-top: 10px;
+}
+#menu a {
+    text-decoration: none;
+    color: #003cff;
+}
+
+/* 5. Área de contenido */
+#content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* 6. Resaltados y estilos tipográficos */
+.highlight-verde {
+    background-color: #bfff00;
+}
+.highlight-amarillo {
+    background-color: #ffff00;
+}
+.highlight-celeste {
+    background-color: #00ffff;
+}
+.highlight-naranja {
+    color: #d2691e;
+    font-weight: bold;
+}
+.highlight-rojo {
+    color: #ff0000;
+}
+
+.tachado {
+    text-decoration: line-through;
+}
+
+/* 7. Pie de página */
+footer {
+    background: #f2f2f2;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
