@@ -1,0 +1,46 @@
+/* 0. Simplifica el box‐model */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* 1. Centrar contenedor */
+  #contenedor {
+    width: 674px;
+  }
+  
+  /* 2. Cabecera y pie */
+  #cabecera{
+    display: none;
+    background: #ff0000;
+    padding: 10px;
+    text-align: center;
+  }
+  #pie {
+    background: #ff0000;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* 3. Menú a la derecha SIN márgenes verticales */
+  #menu {
+    float: left;
+    width: 150px;
+    background: #003cff;
+    padding: 10px;
+    margin: 0;             /* elimina cualquier margin-top / bottom */
+  }
+  
+  /* 4. Contenido a la izquierda, ocupa TODO el resto del ancho */
+  #contenido {
+    float: right;
+    width: calc(100% - 150px);  /* 674px – 150px = 524px */
+    background-color: rgb(255, 0, 221);
+    padding: 10px;
+    margin: 0;                  /* elimina margin-top */
+  }
+  
+  /* 5. Pie limpia ambos floats */
+  #pie {
+    clear: both;
+  }
+  
