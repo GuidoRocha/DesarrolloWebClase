@@ -1,7 +1,6 @@
-/* Foto de perfil personalizada */
 .profile-photo {
     border-radius: 50%;
-    border: 7px solid #d4af37;    /* borde metálico dorado */
+    border: 7px solid #d4af37;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease;
   }
@@ -10,18 +9,14 @@
     transform: scale(1.05);
   }
 
-
-/* Estilos generales */
 body {
-    padding-top: 56px; /* Para compensar la navbar fixed-top */
+    padding-top: 56px;
 }
 
 section {
     padding: 60px 0;
 }
 
-
-/* Colores personalizados */
 .bg-purple {
     background-color: #6f42c1;
 }
@@ -30,14 +25,12 @@ section {
     color: #6f42c1;
 }
 
-/* Estilos para la sección de inicio */
 #inicio {
     min-height: 80vh;
     display: flex;
     align-items: center;
 }
 
-/* Animación para las tarjetas de habilidades */
 .card {
     transition: transform 0.3s ease;
 }
@@ -46,7 +39,6 @@ section {
     transform: translateY(-10px);
 }
 
-/* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
     #inicio {
         min-height: auto;
