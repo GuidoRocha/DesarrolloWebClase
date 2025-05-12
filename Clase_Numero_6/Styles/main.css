@@ -1,0 +1,15 @@
+/* Estilo del contenido principal */
+main {
+   flex: 1;
+   padding: 1rem;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: flex-start;
+}
+
+/* Estilo del artículo */
+article {
+   width: 75%;
+   padding: 1rem;
+}
