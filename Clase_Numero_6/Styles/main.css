@@ -1,4 +1,3 @@
-/* Estilo del contenido principal */
 main {
    flex: 1;
    padding: 1rem;
@@ -8,7 +7,6 @@ main {
    align-items: flex-start;
 }
 
-/* Estilo del artículo */
 article {
    width: 75%;
    padding: 1rem;
