@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Sale Argentina</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Increíbles Ofertas del Hot Sale en Argentina🔥🥵</h1>
+        <p class="date">Mayo 2025</p>
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#viajes">Viajes</a></li>
+                <li><a href="#tecnologia">Tecnología</a></li>
+                <li><a href="#indumentaria">Indumentaria</a></li>
+                <li><a href="#promociones-bancarias">Promociones Bancarias</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu">
+        <button id="menu-toggle">☰</button>
+        <ul id="mobile-menu-list" class="hidden">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#viajes">Viajes</a></li>
+            <li><a href="#tecnologia">Tecnología</a></li>
+            <li><a href="#indumentaria">Indumentaria</a></li>
+            <li><a href="#promociones-bancarias">Promociones Bancarias</a></li>
+        </ul>
+    </div>
+        
+    </header>
+    <main>
+        <section id="inicio" class="hot-sale-highlight">
+            <h2>¡No te pierdas estas ofertas exclusivas!</h2>
+            <article id="viajes">
+                <img src="img/san-carlos-de-bariloche.jpg" alt="Ofertas de viajes">
+                <h3>Viajes con hasta 50% de descuento a los mejores destinos en <a href="https://www.Despegar.com.ar" target="_blank">Despegar</a> </h3>
+                <p>Descubre destinos increíbles con precios únicos. Aprovecha las promociones en vuelos y paquetes turísticos.</p>
+            </article>
+            <article id="tecnologia">
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <img src="img/61d3378d218ac.jpg" alt="Ofertas en tecnología">
+                        <img src="img/images.jpeg" alt="Ofertas en tecnología">
+                        <img src="img/maxresdefault.jpg" alt="Ofertas en tecnología">
+                    </div>
+                </div>
+                <h3>Tecnología al mejor precio en <a href="https://cellshop.com/" target="_blank">CellShop</a></h3>
+                <p>Renueva tus dispositivos con descuentos en celulares, laptops y más.</p>
+            </article>
+            <article id="indumentaria">
+                <img src="img/Walmartmarcas0_EN1153661_MG224081181.png" alt="Ofertas en cursos">
+                <img src="img/images (1).jpeg" alt="Ofertas en cursos">
+                <h3>Ropa con grandes descuentos en <a href="https://www.avellanedaauntoque.com/" target="_blank">Avellaneda a un toque</a> </h3>
+                <p>Comprate la ropa barata, lleve para el caballero y la dama. Desde ropa deportiva hasta el traje de 15</p>
+            </article>
+        </section>
+        <section id="promociones-bancarias" class="bank-promotions">
+            <h2>Promociones con Tarjetas Bancarias</h2>
+            <p>Aprovecha cuotas sin interés y descuentos exclusivos con tus tarjetas de crédito.</p>
+            <img src="img/descarga.png" alt="Promociones bancarias">
+            <img src="img/descarga.jpeg" alt="Promociones bancarias">
+            <img src="img/descarga (1).png" alt="Promociones bancarias">
+        </section>
+    </main>
+    <footer>
+        <p>Hot Sale Argentina - Mayo 2025</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuToggle = document.getElementById("menu-toggle");
+            const mobileMenuList = document.getElementById("mobile-menu-list");
+
+            menuToggle.addEventListener("click", () => {
+                mobileMenuList.classList.toggle("hidden");
+            });
+        });
+    </script>
+</body>
+</html>

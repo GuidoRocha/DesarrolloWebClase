@@ -1,0 +1,48 @@
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+        text-align: center;
+    }
+
+    .main-news article {
+        margin: 10px;
+    }
+
+    .secondary-news article {
+        margin: 10px;
+    }
+
+    .hot-sale-highlight article {
+        margin: 10px;
+    }
+
+    .bank-promotions {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .main-news article h2 {
+        font-size: 1.5rem;
+    }
+
+    .secondary-news article h3 {
+        font-size: 1.2rem;
+    }
+
+    .hot-sale-highlight article h3 {
+        font-size: 1.5rem;
+    }
+
+    .bank-promotions h2 {
+        font-size: 1.5rem;
+    }
+}

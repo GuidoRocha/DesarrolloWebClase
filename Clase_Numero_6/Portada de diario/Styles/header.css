@@ -1,0 +1,47 @@
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #00A8E8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #FF5733;
+    text-shadow: 0 0 5px rgba(255, 87, 51, 0.5);
+}
+
+header .date {
+    font-size: 1rem;
+    color: #666666;
+}
+
+.desktop-menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.desktop-menu ul li {
+    margin: 0 15px;
+}
+
+.desktop-menu ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.desktop-menu ul li a:hover {
+    color: #FF5733;
+}
+
+.mobile-menu {
+    display: none;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    cursor: pointer;
+}

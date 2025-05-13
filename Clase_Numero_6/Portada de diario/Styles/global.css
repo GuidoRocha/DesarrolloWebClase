@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, #f9f9f9, #eaeaea);
+    color: #333333;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mostrar el menú hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px;
+        position: relative;
+    }
+
+    .mobile-menu button {
+        background-color: #FF5733;
+        color: #ffffff;
+        border: none;
+        font-size: 1.5rem;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+        position: fixed; 
+        top: 120px;
+        right: 10px;
+        z-index: 1000; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .mobile-menu ul {
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        width: 200px;
+        background-color: #ffffff;
+        list-style: none;
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
+
+    .mobile-menu ul.hidden {
+        display: none;
+    }
+
+    .mobile-menu ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .mobile-menu ul li a {
+        text-decoration: none;
+        color: #333333;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .mobile-menu ul li a:hover {
+        color: #FF5733;
+    }
+}
